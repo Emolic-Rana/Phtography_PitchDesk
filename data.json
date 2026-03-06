@@ -15,87 +15,11 @@
       "title": "Shubhendu & Poonam",
       "category": "portrait"
     },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=view&id=",
-      "category": "portrait"
-    }
-  ],
-
-  "videos": [
-    {
-      "filename": "https://drive.google.com/uc?export=download&id=VIDEO_ID_1",
-      "title": "Wedding Highlights",
-      "category": "video",
-      "isExternal": false
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=download&id=VIDEO_ID_2",
-      "title": "Wedding Teaser",
-      "category": "video",
-      "isExternal": false
-    },
-    {
-      "filename": "https://drive.google.com/uc?export=download&id=VIDEO_ID_3",
-      "title": "Wedding Reel",
-      "category": "video",
-      "isExternal": false
-    }
+    
   ],
 
   "folders": {
     "photos": "",
-    "videos": ""
   }
 }
+

@@ -1,25 +1,20 @@
 {
   "photos": [
     {
-      "filename": "https://drive.google.com/uc?export=view&id=105JbhgOWUMpX3XGEVXs2LgOSrRrpmS4k",
+      "src": "https://drive.google.com/thumbnail?sz=w1000&id=105JbhgOWUMpX3XGEVXs2LgOSrRrpmS4k",
       "title": "Shubhendu & Poonam",
       "category": "landscape"
     },
     {
-      "filename": "https://drive.google.com/uc?export=view&id=1dA1dm1PqvVYFmxsAEKcmIsoinfOkQD_i",
+      "src": "https://drive.google.com/thumbnail?sz=w1000&id=1dA1dm1PqvVYFmxsAEKcmIsoinfOkQD_i",
       "title": "Shubham & Suvarana",
       "category": "urban"
     },
     {
-      "filename": "https://drive.google.com/uc?export=view&id=1ukajEfhUali7BoangwyREsXcYEZhEMcV",
+      "src": "https://drive.google.com/thumbnail?sz=w1000&id=1ukajEfhUali7BoangwyREsXcYEZhEMcV",
       "title": "Shubhendu & Poonam",
       "category": "portrait"
-    },
-    
+    }
   ],
-
-  "folders": {
-    "photos": "",
-  }
+  "videos": [] 
 }
-

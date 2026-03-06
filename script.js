@@ -5,9 +5,8 @@
     const filterItems = document.querySelectorAll('.filter-item');
     const lightboxModal = document.getElementById('lightboxModal');
     const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxVid = document.getElementById('lightboxVid');
+    const videoContainer = document.getElementById('videoContainer');
 
-    // Shuruat PHOTOS se hogi
     let currentFilter = 'photos'; 
     let currentIndex = 0;
     const imagesPerLoad = 3;
@@ -16,13 +15,11 @@
         try {
             const response = await fetch('data.json');
             const data = await response.json();
-            
             allImages = []; 
             if (data.photos) data.photos.forEach(p => allImages.push({ ...p, type: 'photo' }));
             if (data.videos) data.videos.forEach(v => allImages.push({ ...v, type: 'video' }));
-            
             renderGallery(true);
-        } catch (e) { console.error("JSON Error:", e); }
+        } catch (e) { console.error("Error:", e); }
     }
 
     function renderGallery(reset = false) {
@@ -32,7 +29,6 @@
             loadMoreBtn.classList.remove('hidden');
         }
 
-        // --- FILTER LOGIC: Sirf wahi dikhao jo manga hai ---
         const filtered = allImages.filter(item => {
             if (currentFilter === 'photos') return item.type === 'photo';
             if (currentFilter === 'videos') return item.type === 'video';
@@ -45,7 +41,6 @@
         for (let i = currentIndex; i < limit; i++) {
             const item = filtered[i];
             const isVid = item.type === 'video';
-            
             htmlStr += `
                 <div class="grid-item ${isVid ? 'video-card' : ''}" 
                      data-type="${item.type}" 
@@ -59,7 +54,6 @@
                     ${isVid ? '<div class="video-icon"><i class="fas fa-play"></i></div>' : ''}
                 </div>`;
         }
-
         grid.innerHTML += htmlStr;
         currentIndex = limit;
         if (currentIndex >= filtered.length) loadMoreBtn.classList.add('hidden');
@@ -74,15 +68,20 @@
         const title = item.getAttribute('data-title');
 
         if (type === 'video') {
-            const videoId = url.split('id=')[1].split('&')[0]; 
-            const previewUrl = `https://drive.google.com/file/d/${videoId}/preview`;
-            
             lightboxImg.style.display = 'none';
-            lightboxVid.style.display = 'block';
-            lightboxVid.innerHTML = `<iframe src="${previewUrl}" style="width:100%; height:80vh; border:none;" allow="autoplay"></iframe>`;
+            videoContainer.style.display = 'block';
+            
+            // Sabse stable link format
+            const embedUrl = `https://drive.google.com/file/d/${url}/preview`;
+            
+            videoContainer.innerHTML = `<iframe 
+                src="${embedUrl}" 
+                style="width:100%; height:100%; border:none;" 
+                allow="autoplay; fullscreen" 
+                allowfullscreen></iframe>`;
         } else {
-            lightboxVid.style.display = 'none';
-            lightboxVid.innerHTML = '';
+            videoContainer.style.display = 'none';
+            videoContainer.innerHTML = '';
             lightboxImg.style.display = 'block';
             lightboxImg.src = url;
         }
@@ -94,7 +93,7 @@
 
     document.getElementById('closeLightbox').addEventListener('click', () => {
         lightboxModal.style.display = 'none';
-        lightboxVid.innerHTML = '';
+        videoContainer.innerHTML = ''; 
         document.body.style.overflow = 'auto';
     });
 

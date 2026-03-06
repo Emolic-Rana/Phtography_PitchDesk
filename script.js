@@ -1,6 +1,25 @@
 (function() {
-    // Global variables
-    let allImages = [];
+    // 1. Images Array - Ab videos bhi add kar diye
+    const allImages = [
+        // PHOTOS (location: 'all')
+        { src: './Photos/0E7A5648.jpg', hd: './Photos/0E7A5648.jpg', title: 'Shubhendu & Poonam' , category: 'landscape', location: 'all', type: 'photo' },
+        { src: './Photos/0E7A5840 (1).jpg', hd: './Photos/0E7A5840 (1).jpg', title: 'Shubhendu & Poonam', category: 'portrait', location: 'all', type: 'photo' },
+        { src: './Photos/0E7A6130.jpg', hd: './Photos/0E7A6130.jpg', title: 'Shubhendu & Poonam', category: 'portrait', location: 'all', type: 'photo' },
+        { src: './Photos/1742632102633 (2).jpg', hd: './Photos/1742632102633 (2).jpg', title: 'Shubham & Suvarana', category: 'urban', location: 'all', type: 'photo' },
+        { src: './Photos/0E7A6136.jpg', hd: './Photos/0E7A6136.jpg', title: 'Raj & Seema', category: 'portrait', location: 'all', type: 'photo' },
+        { src: './Photos/0E7A6147.jpg', hd: './Photos/0E7A6147.jpg', title: 'Shubhendu & Poonam', category: 'portrait', location: 'all', type: 'photo' },
+        { src: './Photos/0E7A6238 (1).jpg', hd: './Photos/0E7A6238 (1).jpg', title: 'Shubhendu & Poonam', category: 'portrait', location: 'all', type: 'photo' },
+        { src: './Photos/0E7A6399.jpg', hd: './Photos/0E7A6399.jpg', title: 'Shubhendu & Poonam', category: 'portrait', location: 'all', type: 'photo' },
+        { src: './Photos/1742632100929.jpg', hd: './Photos/1742632100929.jpg', title: 'Shubhendu & Poonam', category: 'portrait', location: 'all', type: 'photo' },
+        { src: './Photos/1742632101710 (1).jpg', hd: './Photos/1742632101710 (1).jpg', title: 'Shubhendu & Poonam', category: 'portrait', location: 'all', type: 'photo' },
+        { src: './Photos/1742632102236.jpg', hd: './Photos/1742632102236.jpg', title: 'Shubhendu & Poonam', category: 'portrait', location: 'all', type: 'photo' },
+        { src: './Photos/1742632102633 (2)jpg', hd: './Photos/1742632102633 (2).jpg', title: 'Shubhendu & Poonam', category: 'portrait', location: 'all', type: 'photo' },
+        // VIDEOS (location: 'videos')
+        { src: './Videos/IMG_202510151213220.MP4', hd: './Videos/IMG_202510151213220.MP4', title: 'Wedding Highlights', category: 'video', location: 'videos', type: 'video' },
+        { src: './Videos/IMG_202510151219310.MP4', hd: './Videos/IMG_202510151219310.MP4', title: 'Wedding Teaser', category: 'video', location: 'videos', type: 'video' },
+        { src: './Videos/IMG_2403.MP4', hd: './Videos/IMG_2403.MP4', title: 'Pre-wedding Shoot', category: 'Wedding Reel', location: 'videos', type: 'video' },
+    ];
+
     const grid = document.getElementById('portfolioGrid');
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     const filterItems = document.querySelectorAll('.filter-item');
@@ -9,65 +28,6 @@
     let currentIndex = 0;
     const imagesPerLoad = 3;
 
-    // ------------------- JSON DATA LOAD KARO -------------------
-    async function loadImageData() {
-        try {
-            const response = await fetch('data.json');
-            const data = await response.json();
-            
-            // Photos add karo
-            data.photos.forEach(photo => {
-                allImages.push({
-                    src: data.folders.photos + photo.filename,
-                    hd: data.folders.photos + photo.filename,
-                    title: photo.title,
-                    category: photo.category,
-                    location: 'all',
-                    type: 'photo'
-                });
-            });
-            
-            // Videos add karo
-            data.videos.forEach(video => {
-                if (video.isExternal) {
-                    // External video (like Vimeo)
-                    allImages.push({
-                        src: video.src,
-                        hd: video.src,
-                        title: video.title,
-                        category: video.category,
-                        location: 'videos',
-                        type: 'video'
-                    });
-                } else {
-                    // Local video
-                    allImages.push({
-                        src: data.folders.videos + video.filename,
-                        hd: data.folders.videos + video.filename,
-                        title: video.title,
-                        category: video.category,
-                        location: 'videos',
-                        type: 'video'
-                    });
-                }
-            });
-            
-            console.log('Total items loaded:', allImages.length);
-            
-            // Data load hone ke baad gallery render karo
-            renderGallery();
-            
-        } catch (error) {
-            console.error('Error loading data.json:', error);
-            // Fallback data agar json load na ho
-            allImages = [
-                { src: 'https://images.pexels.com/photos/2874901/pexels-photo-2874901.jpeg?auto=compress&cs=tinysrgb&w=600', hd: 'https://images.pexels.com/photos/2874901/pexels-photo-2874901.jpeg?auto=compress&cs=tinysrgb&w=1260', title: 'Coastal Silence', category: 'landscape', location: 'all', type: 'photo' },
-            ];
-            renderGallery();
-        }
-    }
-
-    // ------------------- RENDER GALLERY -------------------
     function renderGallery(reset = false) {
         if (reset) {
             grid.innerHTML = '';
@@ -76,13 +36,6 @@
         }
 
         const filteredImages = allImages.filter(img => img.location === currentFilter);
-        
-        // Agar filtered images empty hain to kuch mat dikhao
-        if (filteredImages.length === 0) {
-            grid.innerHTML = '<div style="text-align: center; padding: 50px; color: #777;">No items to display</div>';
-            loadMoreBtn.classList.add('hidden');
-            return;
-        }
         
         let htmlStr = '';
         const limit = Math.min(currentIndex + imagesPerLoad, filteredImages.length);
@@ -120,7 +73,6 @@
         }
     }
 
-    // ------------------- FILTER CLICK HANDLER -------------------
     filterItems.forEach(item => {
         item.addEventListener('click', function() {
             filterItems.forEach(i => i.classList.remove('active'));
@@ -130,17 +82,17 @@
         });
     });
 
-    // ------------------- LOAD MORE BUTTON -------------------
+    renderGallery();
     loadMoreBtn.addEventListener('click', () => renderGallery());
 
-    // ------------------- LIGHTBOX CODE -------------------
+    // LIGHTBOX - UPDATED FOR BIG VIDEOS
     const lightboxModal = document.getElementById('lightboxModal');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxVid = document.getElementById('lightboxVid');
     const lightboxCaption = document.getElementById('lightboxCaption');
     const closeLightbox = document.getElementById('closeLightbox');
 
-    // Lightbox styles
+    // CSS inline add karo lightbox ke liye
     if (lightboxModal) {
         lightboxModal.style.cssText = `
             display: none;
@@ -173,7 +125,6 @@
         `;
     }
 
-    // Grid click handler for lightbox
     if (grid) {
         grid.addEventListener('click', (e) => {
             const item = e.target.closest('.grid-item');
@@ -188,10 +139,12 @@
                     lightboxImg.style.display = 'none';
                     lightboxVid.style.display = 'block';
                     
+                    // Video source set karo
                     const source = lightboxVid.querySelector('source');
                     if (source) {
                         source.src = videoUrl;
                     } else {
+                        // Agar source nahi hai to naya banao
                         const newSource = document.createElement('source');
                         newSource.src = videoUrl;
                         newSource.type = 'video/mp4';
@@ -238,11 +191,6 @@
             }
         });
     }
-
-    // ------------------- START THE APP -------------------
-    // Data load karo
-    loadImageData();
-
 })();
 
 // MOBILE MENU TOGGLE

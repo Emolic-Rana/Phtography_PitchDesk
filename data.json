@@ -1,99 +1,101 @@
 {
   "photos": [
     {
-      "filename": "0E7A5648.jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=105JbhgOWUMpX3XGEVXs2LgOSrRrpmS4k",
       "title": "Shubhendu & Poonam",
       "category": "landscape"
     },
     {
-      "filename": "1742632102633 (2).jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=1dA1dm1PqvVYFmxsAEKcmIsoinfOkQD_i",
       "title": "Shubham & Suvarana",
       "category": "urban"
     },
     {
-      "filename": "IMG_5710.jpg",
-      "title": "Raj & Seema",
+      "filename": "https://drive.google.com/uc?export=view&id=1ukajEfhUali7BoangwyREsXcYEZhEMcV",
+      "title": "Shubhendu & Poonam",
       "category": "portrait"
     },
     {
-      "filename": "0E7A5840 (1).jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "0E7A6130.jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "0E7A6147.jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "0E7A6136.jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "0E7A6238.jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "0E7A6399.jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "1742632100929.jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "1742632101049.jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "1742632101295.jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "1742632101499.jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "1742632101710 (1).jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "1742632102236.jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "1742632102633 (2).jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     },
     {
-      "filename": "1742632102692jpg",
+      "filename": "https://drive.google.com/uc?export=view&id=",
       "category": "portrait"
     }
   ],
+
   "videos": [
     {
-      "filename": "IMG_202510151213220.MP4",
+      "filename": "https://drive.google.com/uc?export=download&id=VIDEO_ID_1",
       "title": "Wedding Highlights",
       "category": "video",
       "isExternal": false
     },
     {
-      "filename": "IMG_202510151219310.MP4",
+      "filename": "https://drive.google.com/uc?export=download&id=VIDEO_ID_2",
       "title": "Wedding Teaser",
       "category": "video",
       "isExternal": false
     },
     {
-      "filename": "IMG_2403.MP4",
+      "filename": "https://drive.google.com/uc?export=download&id=VIDEO_ID_3",
       "title": "Wedding Reel",
       "category": "video",
       "isExternal": false
     }
   ],
+
   "folders": {
-    "photos": "./Photos/",
-    "videos": "./Videos/"
+    "photos": "",
+    "videos": ""
   }
 }

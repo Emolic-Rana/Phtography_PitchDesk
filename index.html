@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the lightbox production · Buransheli Resort</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for calligraphy -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&family=Licorice&family=Petit+Formal+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR: ABOUT PICKING CAPTURE PORTFOLIO CONTACT -->
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="IMG_8034.PNG" alt="The Lightbox Production" class="logo-img">
+                </a>
+            </div>
+            <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">ABOUT</a>
+                <a href="#gallery">PORTFOLIO</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-calligraphy">The Lightbox Production</div>
+            <div class="hero-sub">Wedding Photography Services</div>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <div class="container">
+        <section class="about-section" id="about">
+            <h2 class="about-title"><span>About Us</span></h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="0E7A9493.JPG" alt="photography team">
+                </div>
+                <div class="about-text">
+                    <h3>more than just photographers</h3>
+                    <p>The Lightbox Production (TLP) is a premium wedding photography and cinematography brand dedicated
+                        to capturing timeless love stories with elegance and creativity. We specialize in luxury and
+                        royal-style wedding visuals, blending modern storytelling with artistic aesthetics to create
+                        memories that last forever.</p>
+                    <p>Our team focuses on authentic emotions, fine details, and cinematic quality, ensuring every
+                        celebration is documented in a way that feels natural, grand, and unforgettable. At TLP, we
+                        believe every wedding has a unique story, and our mission is to transform those moments into
+                        beautifully crafted visual experiences. </p>
+                    <div class="signature-line">— with lightbox production</div>
+
+                    <div class="team-mini">
+                        <div class="team-mini-item">
+                            <i class="fas fa-camera-retro"></i>
+                            <span>7+ years </span>
+                        </div>
+                        <div class="team-mini-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Uttarakhand</span>
+                        </div>
+                        <div class="team-mini-item">
+                            <i class="fas fa-heart"></i>
+                            <span>analog soul</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+
+        <div class="resort-heading" id="gallery">
+            <h2>GALLERY</h2>
+        </div>
+        <div class="filter-container">
+            <ul class="filter-list">
+                <li class="filter-item active" data-filter="all">PHOTOS</li>
+                <li class="filter-item" data-filter="videos">VIDEOS</li>
+
+            </ul>
+        </div>
+
+        <!-- GALLERY GRID (images will be injected by JS) -->
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+
+        <!-- LOAD MORE BUTTON -->
+        <div class="loadmore-wrapper">
+            <button id="loadMoreBtn">LOAD MORE</button>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact-section" id="contact">
+    <h2 class="about-title"><span>Contact Us</span></h2>
+
+    <div class="contact-wrapper">
+        <div class="contact-logo-box">
+            <img src="IMG_8034.PNG" alt="Logo" class="contact-logo-img">
+            <div class="logo-text">
+                <span class="brand-name">PHOTOGRAPHY</span>
+                <span class="owner-name">GAURAV RANA</span>
+            </div>
+        </div>
+
+        <div class="contact-mini-nav">
+            <a href="#">HOME</a> / 
+            <a href="#about">ABOUT</a> / 
+            <a href="#gallery">PORTFOLIO</a> / 
+            <a href="#contact">CONTACT</a>
+        </div>
+
+        <div class="contact-socials">
+            <a href="https://www.facebook.com/TheLightBoxProduction"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@THELIGHTBOXPRODUCTION"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://www.instagram.com/thelightboxproduction/?hl=en"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/917830974643"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&to=thelightboxproduction72@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+</section>
+        <footer>
+            <p>© 2025 the lightbox production · all photographs are protected</p>
+        </footer>
+    </div> <!-- container end -->
+
+    <!-- lightbox modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+    <span class="close-lightbox" id="closeLightbox">&times;</span>
+    
+    <img class="lightbox-content" id="lightboxImg" src="" alt="" style="display: none;">
+    
+    <video class="lightbox-content" id="lightboxVid" controls autoplay style="display: none;">
+        <source src="" type="video/mp4">
+    </video>
+
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+{
+  "photos": [
+    {
+      "filename": "0E7A5648.jpg",
+      "title": "Shubhendu & Poonam",
+      "category": "landscape"
+    },
+    {
+      "filename": "1742632102633 (2).jpg",
+      "title": "Shubham & Suvarana",
+      "category": "urban"
+    },
+    {
+      "filename": "IMG_5710.jpg",
+      "title": "Raj & Seema",
+      "category": "portrait"
+    },
+    {
+      "filename": "0E7A5840 (1).jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "0E7A6130.jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "0E7A6147.jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "0E7A6136.jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "0E7A6238.jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "0E7A6399.jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "1742632100929.jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "1742632101049.jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "1742632101295.jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "1742632101499.jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "1742632101710 (1).jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "1742632102236.jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "1742632102633 (2).jpg",
+      "category": "portrait"
+    },
+    {
+      "filename": "1742632102692jpg",
+      "category": "portrait"
+    }
+  ],
+  "videos": [
+    {
+      "filename": "IMG_202510151213220.MP4",
+      "title": "Wedding Highlights",
+      "category": "video",
+      "isExternal": false
+    },
+    {
+      "filename": "IMG_202510151219310.MP4",
+      "title": "Wedding Teaser",
+      "category": "video",
+      "isExternal": false
+    },
+    {
+      "filename": "IMG_2403.MP4",
+      "title": "Wedding Reel",
+      "category": "video",
+      "isExternal": false
+    }
+  ],
+  "folders": {
+    "photos": "./Photos/",
+    "videos": "./Videos/"
+  }
+}

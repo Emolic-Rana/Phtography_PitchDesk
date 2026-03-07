@@ -621,17 +621,24 @@ footer {
 
 @media (max-width: 720px) {
   .nav-links {
-    display: none;
+    display: none; /* Default mein band rahega */
     flex-direction: column;
     width: 100%;
     gap: 1.2rem;
     background: #faf9f7;
     padding: 20px 0 10px;
     border-top: 1px solid #ececec;
+    
+    /* Yeh lines menu ko sahi jagah dikhayengi */
+    position: absolute;
+    top: 100%; /* Navbar ke theek neeche se shuru hoga */
+    left: 0;
+    z-index: 1000;
   }
 
-  .nav-links.show {
-    display: flex;
+  /* .show ki jagah .active kar diya hai taaki JS se match kare */
+  .nav-links.active {
+    display: flex !important;
   }
 
   .menu-toggle {
